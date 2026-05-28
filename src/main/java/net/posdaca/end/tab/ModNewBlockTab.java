@@ -1,29 +1,17 @@
 package net.posdaca.end.tab;
 
-import net.posdaca.end.END;
-import net.posdaca.end.block.ModNewBlock;
-import net.posdaca.end.item.ModCompatibleItem;
-
-import net.minecraft.core.registries.Registries;
+import com.simibubi.create.foundation.data.CreateRegistrate;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import net.posdaca.end.block.ModNewBlock;
 
 public class ModNewBlockTab {
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, END.MOD_ID);
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> END_ITEM_TAB = CREATIVE_MODE_TABS.register("end_new_block_tab", () -> CreativeModeTab.builder()
-            .title(Component.translatable("end.NewBlockTab"))
-            .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> ModCompatibleItem.SULFUR_POWDER.get().getDefaultInstance())
-            .displayItems((parameters, output) -> {
-            }).build());
-
-    public static void addItemsToTab(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == END_ITEM_TAB.getKey()) {
-            event.accept(ModNewBlock.BARRED_WIRE);;
-        }
+    public static void registerNewBlockTab(CreateRegistrate registrate) {
+        registrate.defaultCreativeTab("new_block_tab", builder -> builder
+                        .title(Component.translatable("end.NewBlockTab"))
+                        .withTabsBefore(CreativeModeTabs.COMBAT)
+                        .icon(() -> ModNewBlock.BARRED_WIRE.asStack()))
+                .register();
+        ModNewBlock.registerNewBlocks(registrate);
     }
 }
