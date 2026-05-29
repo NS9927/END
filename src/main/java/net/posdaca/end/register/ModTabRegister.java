@@ -2,6 +2,7 @@ package net.posdaca.end.register;
 
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import net.neoforged.bus.api.IEventBus;
+import net.posdaca.end.entity.modZombie.ModZombieEntity;
 import net.posdaca.end.tab.*;
 
 public class ModTabRegister {
@@ -13,5 +14,8 @@ public class ModTabRegister {
         ModCompatibleItemTab.registerCompatibleItemTab(registrate);
         ModNewBlockTab.registerNewBlockTab(registrate);
         ModCreateBlockTab.registerCreateTab(registrate);
+
+        ModZombieEntity.registerEntities(registrate);
+        ModEggItemTab.registerEggItemTab(registrate);
     }
 }

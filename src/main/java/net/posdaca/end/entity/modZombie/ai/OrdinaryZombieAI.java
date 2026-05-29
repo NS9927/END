@@ -1,7 +1,7 @@
-package net.posdaca.end.entity.ai;
+package net.posdaca.end.entity.modZombie.ai;
 
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.posdaca.end.entity.OrdinaryZombie;
+import net.posdaca.end.entity.modZombie.OrdinaryZombie;
 
 public class OrdinaryZombieAI {
     public static void init(OrdinaryZombie zombie) {

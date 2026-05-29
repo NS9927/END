@@ -1,10 +1,10 @@
-package net.posdaca.end.entity;
+package net.posdaca.end.entity.modZombie;
 
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.EntityEntry;
 import net.minecraft.world.entity.MobCategory;
 
-public class ModEntity {
+public class ModZombieEntity {
     public static EntityEntry<OrdinaryZombie> ORDINARY_ZOMBIE;
 
     public static void registerEntities(CreateRegistrate registrate) {
