@@ -8,8 +8,6 @@ public class ModCompatibleItem {
     public static ItemEntry<Item> SULFUR_POWDER;
     public static ItemEntry<Item> ANDESITE_POWDER;
 
-
-
     public static void registerCompatibleItems(CreateRegistrate registrate) {
         SULFUR_POWDER = registrate.item("sulfur_powder", Item::new).register();
         ANDESITE_POWDER = registrate.item("andesite_powder", Item::new).register();

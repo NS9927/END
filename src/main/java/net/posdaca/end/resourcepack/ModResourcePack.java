@@ -11,7 +11,7 @@ public class ModResourcePack {
     public static void onAddPackFinders(AddPackFindersEvent event) {
         if (event.getPackType() == PackType.CLIENT_RESOURCES) {
             event.addPackFinders(
-                    ResourceLocation.fromNamespaceAndPath("end", "resourcepacks/packI18ncn"),
+                    ResourceLocation.fromNamespaceAndPath("end", "resourcepacks/packi18ncn"),
                     PackType.CLIENT_RESOURCES,
                     Component.literal("整合包专用D老师精翻"),
                     PackSource.BUILT_IN,

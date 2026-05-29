@@ -1,16 +1,10 @@
 package net.posdaca.end.entity.modZombie;
 
-import com.simibubi.create.foundation.data.CreateRegistrate;
-import com.tterrag.registrate.util.entry.EntityEntry;
-import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.entity.EntityType;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.posdaca.end.register.ModEntityRegister;
 
 public class ModZombieEntity {
-    public static EntityEntry<OrdinaryZombie> ORDINARY_ZOMBIE;
-
-    public static void registerEntities(CreateRegistrate registrate) {
-        ORDINARY_ZOMBIE = registrate.entity("ordinary_zombie", OrdinaryZombie::new, MobCategory.MONSTER)
-                .properties(b -> b.sized(0.6f, 1.95f).clientTrackingRange(8))
-                .attributes(OrdinaryZombie::createAttributes)
-                .register();
-    }
+    public static final DeferredHolder<EntityType<?>, EntityType<OrdinaryZombie>> ORDINARY_ZOMBIE =
+            ModEntityRegister.ORDINARY_ZOMBIE;
 }

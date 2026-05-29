@@ -1,14 +1,32 @@
 package net.posdaca.end.register;
 
-import com.simibubi.create.foundation.data.CreateRegistrate;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
 import net.neoforged.bus.api.IEventBus;
-import net.posdaca.end.entity.modZombie.ModZombieEntity;
+import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.posdaca.end.END;
+import net.posdaca.end.entity.modZombie.OrdinaryZombie;
 
 public class ModEntityRegister {
-    public static void register(IEventBus modEventBus) {
-        CreateRegistrate registrate = ModRegistrate.REGISTRATE;
-        registrate.registerEventListeners(modEventBus);
+    public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
+            DeferredRegister.create(Registries.ENTITY_TYPE, END.MOD_ID);
 
-        ModZombieEntity.registerEntities(registrate);
+    public static final DeferredHolder<EntityType<?>, EntityType<OrdinaryZombie>> ORDINARY_ZOMBIE =
+            ENTITY_TYPES.register("ordinary_zombie",
+                    () -> EntityType.Builder.of(OrdinaryZombie::new, MobCategory.MONSTER)
+                            .sized(0.6f, 1.95f)
+                            .clientTrackingRange(8)
+                            .build("ordinary_zombie"));
+
+    public static void register(IEventBus modEventBus) {
+        ENTITY_TYPES.register(modEventBus);
+        modEventBus.addListener(ModEntityRegister::onEntityAttributeCreation);
+    }
+
+    private static void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
+        event.put(ORDINARY_ZOMBIE.get(), OrdinaryZombie.createAttributes().build());
     }
 }

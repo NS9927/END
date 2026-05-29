@@ -11,7 +11,7 @@ public class ModEggItem {
 
     public static void registerEggItems(CreateRegistrate registrate) {
         ORDINARY_ZOMBIE_EGG = registrate.item("ordinary_zombie_spawn_egg", p ->
-                        new DeferredSpawnEggItem(() -> ModZombieEntity.ORDINARY_ZOMBIE.get(), 0xC1B06D, 0x3B7929, p))
+                        new DeferredSpawnEggItem(ModZombieEntity.ORDINARY_ZOMBIE, 0xC1B06D, 0x3B7929, p))
                 .model((ctx, prov) -> prov.withExistingParent(ctx.getName(), ResourceLocation.withDefaultNamespace("item/template_spawn_egg")))
                 .register();
     }
