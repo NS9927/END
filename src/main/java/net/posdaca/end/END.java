@@ -2,6 +2,7 @@ package net.posdaca.end;
 
 import com.mojang.logging.LogUtils;
 
+import net.posdaca.end.register.ModEntityRegister;
 import org.slf4j.Logger;
 
 import net.neoforged.bus.api.IEventBus;
@@ -24,6 +25,7 @@ public class END {
         NeoForge.EVENT_BUS.register(this);
 
         ModTabRegister.register(modEventBus);
+        ModEntityRegister.register(modEventBus);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }

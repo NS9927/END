@@ -9,7 +9,7 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
-import net.posdaca.end.resourcepack.modResourcePack;
+import net.posdaca.end.resourcepack.ModResourcePack;
 
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public class ENDClient {
     public ENDClient(ModContainer container) {
         container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
 
-        Objects.requireNonNull(container.getEventBus()).addListener(modResourcePack::onAddPackFinders);
+        Objects.requireNonNull(container.getEventBus()).addListener(ModResourcePack::onAddPackFinders);
     }
 
     @SubscribeEvent

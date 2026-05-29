@@ -7,7 +7,7 @@ import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
 import net.neoforged.neoforge.event.AddPackFindersEvent;
 
-public class modResourcePack {
+public class ModResourcePack {
     public static void onAddPackFinders(AddPackFindersEvent event) {
         if (event.getPackType() == PackType.CLIENT_RESOURCES) {
             event.addPackFinders(
