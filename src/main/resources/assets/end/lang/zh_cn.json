@@ -12,5 +12,10 @@
 
   "end.NewItemTab": "The End - 物品",
 
-  "item.end.steel_wire": "钢丝"
+  "item.end.steel_wire": "钢丝",
+
+  "end.EggItemTab": "The End - 生物蛋",
+
+  "item.ordinary_zombie_spawn_egg": "普通丧尸生物蛋",
+  "item.hawkeye_zombie_spawn_egg": "鹰眼丧尸生物蛋"
 }

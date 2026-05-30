@@ -13,8 +13,6 @@ public class ModTabRegister {
         ModCompatibleItemTab.registerCompatibleItemTab(registrate);
         ModNewBlockTab.registerNewBlockTab(registrate);
         ModCreateBlockTab.registerCreateTab(registrate);
-
-        ModEntityRegister.register(modEventBus);
         ModEggItemTab.registerEggItemTab(registrate);
     }
 }

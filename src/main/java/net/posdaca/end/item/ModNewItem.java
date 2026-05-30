@@ -8,6 +8,7 @@ public class ModNewItem {
     public static ItemEntry<Item> STEEL_WIRE;
 
     public static void registerNewItems(CreateRegistrate registrate) {
+        //钢丝
         STEEL_WIRE = registrate.item("steel_wire", Item::new).register();
     }
 }

@@ -9,7 +9,9 @@ public class ModCompatibleItem {
     public static ItemEntry<Item> ANDESITE_POWDER;
 
     public static void registerCompatibleItems(CreateRegistrate registrate) {
+        //硫磺粉
         SULFUR_POWDER = registrate.item("sulfur_powder", Item::new).register();
+        //安山岩粉
         ANDESITE_POWDER = registrate.item("andesite_powder", Item::new).register();
     }
 }

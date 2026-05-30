@@ -11,7 +11,7 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
-import net.posdaca.end.register.ModEntityRegister;
+import net.posdaca.end.entity.ModZombieEntity;
 import net.posdaca.end.resourcepack.ModResourcePack;
 
 import java.util.Objects;
@@ -34,7 +34,7 @@ public class ENDClient {
 
     @SubscribeEvent
     static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        event.registerEntityRenderer(ModEntityRegister.ORDINARY_ZOMBIE.get(), ZombieRenderer::new);
-        event.registerEntityRenderer(ModEntityRegister.HAWKEYE_ZOMBIE.get(), ZombieRenderer::new);
+        event.registerEntityRenderer(ModZombieEntity.ORDINARY_ZOMBIE.get(), ZombieRenderer::new);
+        event.registerEntityRenderer(ModZombieEntity.HAWKEYE_ZOMBIE.get(), ZombieRenderer::new);
     }
 }

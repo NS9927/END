@@ -8,21 +8,19 @@ import net.posdaca.end.entity.ModZombieEntity;
 
 public class ModEggItem {
 
-    //普通丧尸生物蛋
     public static ItemEntry<DeferredSpawnEggItem> ORDINARY_ZOMBIE_EGG;
 
-    //鹰眼丧尸生物蛋
     public static ItemEntry<DeferredSpawnEggItem> HAWKEYE_ZOMBIE_EGG;
 
     public static void registerEggItems(CreateRegistrate registrate) {
+        //普通丧尸生物蛋
         ORDINARY_ZOMBIE_EGG = registrate.item("ordinary_zombie_spawn_egg", p ->
                         new DeferredSpawnEggItem(ModZombieEntity.ORDINARY_ZOMBIE, 0xC1B06D, 0x3B7929, p))
-                .model((ctx, prov) -> prov.withExistingParent(ctx.getName(), ResourceLocation.withDefaultNamespace("item/template_spawn_egg")))
                 .register();
 
+        //鹰眼丧尸生物蛋
         HAWKEYE_ZOMBIE_EGG = registrate.item("hawkeye_zombie_spawn_egg", p ->
                         new DeferredSpawnEggItem(ModZombieEntity.HAWKEYE_ZOMBIE, 0x4A7B9D, 0x2D5A7A, p))
-                .model((ctx, prov) -> prov.withExistingParent(ctx.getName(), ResourceLocation.withDefaultNamespace("item/template_spawn_egg")))
                 .register();
     }
 }

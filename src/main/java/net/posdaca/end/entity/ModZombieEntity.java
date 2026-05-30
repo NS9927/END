@@ -11,9 +11,9 @@ public class ModZombieEntity {
 
     //普通丧尸
     public static final DeferredHolder<EntityType<?>, EntityType<OrdinaryZombieMod>> ORDINARY_ZOMBIE =
-            ModEntityRegister.ORDINARY_ZOMBIE;
+            OrdinaryZombieMod.REGISTRY;
 
     //鹰眼丧尸
     public static final DeferredHolder<EntityType<?>, EntityType<HawkeyeZombieMod>> HAWKEYE_ZOMBIE =
-            ModEntityRegister.HAWKEYE_ZOMBIE;
+            HawkeyeZombieMod.REGISTRY;
 }
