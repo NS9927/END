@@ -35,5 +35,6 @@ public class ENDClient {
     @SubscribeEvent
     static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(ModEntityRegister.ORDINARY_ZOMBIE.get(), ZombieRenderer::new);
+        event.registerEntityRenderer(ModEntityRegister.HAWKEYE_ZOMBIE.get(), ZombieRenderer::new);
     }
 }
