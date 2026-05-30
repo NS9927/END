@@ -2,7 +2,6 @@ package net.posdaca.end.item;
 
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.ItemEntry;
-import net.minecraft.resources.ResourceLocation;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.posdaca.end.entity.ModZombieEntity;
 

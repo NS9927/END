@@ -18,6 +18,10 @@ public class ModEntityRegister {
 
     //注册实体类型和属性创建事件
     public static void register(IEventBus modEventBus) {
+        //提前加载实体类，确保 REGISTRY 在绑定事件总线前完成注册
+        OrdinaryZombieMod.REGISTRY.hashCode();
+        HawkeyeZombieMod.REGISTRY.hashCode();
+
         ENTITY_TYPES.register(modEventBus);
         modEventBus.addListener(ModEntityRegister::onEntityAttributeCreation);
     }
