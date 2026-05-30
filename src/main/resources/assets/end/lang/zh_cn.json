@@ -1,21 +1,19 @@
 {
   "end.NewBlockTab": "The End - 方块",
-
-  "block.end.barred_wire_block": "铁丝网",
+  "block.end.new_block.barred_wire_block": "铁丝网",
 
   "end.CreateBlockTab": "The End - 机械动力方块",
 
   "end.CompatibleItemTab": "The End - 兼容性物品",
-
-  "item.end.sulfur_powder": "硫磺粉",
-  "item.end.andesite_powder": "安山岩粉",
+  "item.end.compatible_item.sulfur_powder": "硫磺粉",
+  "item.end.compatible_item.andesite_powder": "安山岩粉",
 
   "end.NewItemTab": "The End - 物品",
-
-  "item.end.steel_wire": "钢丝",
+  "item.end.new_item.steel_wire": "钢丝",
 
   "end.EggItemTab": "The End - 生物蛋",
-
-  "item.ordinary_zombie_spawn_egg": "普通丧尸生物蛋",
-  "item.hawkeye_zombie_spawn_egg": "鹰眼丧尸生物蛋"
+  "item.end.spawn_egg.ordinary_zombie_spawn_egg": "普通丧尸生物蛋",
+  "entity.end.ordinary_zombie": "普通丧尸",
+  "item.end.spawn_egg.hawkeye_zombie_spawn_egg": "鹰眼丧尸生物蛋",
+  "entity.end.hawkeye_zombie": "鹰眼丧尸"
 }

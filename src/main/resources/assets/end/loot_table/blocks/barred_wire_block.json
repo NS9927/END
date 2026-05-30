@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "end:barred_wire_block"
+          "name": "end:new_block/barred_wire_block"
         }
       ],
       "rolls": 1.0

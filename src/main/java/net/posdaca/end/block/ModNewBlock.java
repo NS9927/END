@@ -9,7 +9,7 @@ public class ModNewBlock {
     public static BlockEntry<IronBarsBlock> BARRED_WIRE;
 
     public static void registerNewBlocks(CreateRegistrate registrate) {
-        BARRED_WIRE = registrate.block("barred_wire_block", IronBarsBlock::new)
+        BARRED_WIRE = registrate.block("new_block/barred_wire_block", IronBarsBlock::new)
                 .initialProperties(() -> Blocks.IRON_BARS)
                 .simpleItem()
                 .register();
