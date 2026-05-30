@@ -4,7 +4,7 @@ import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
-import net.posdaca.end.entity.modZombie.ModZombieEntity;
+import net.posdaca.end.entity.ModZombieEntity;
 
 public class ModEggItem {
     public static ItemEntry<DeferredSpawnEggItem> ORDINARY_ZOMBIE_EGG;
