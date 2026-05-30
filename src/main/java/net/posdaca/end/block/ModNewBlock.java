@@ -6,12 +6,13 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.IronBarsBlock;
 
 public class ModNewBlock {
-    public static BlockEntry<IronBarsBlock> BARRED_WIRE;
+    public static BlockEntry<IronBarsBlock> WIRE_FENCE_BLOCK;
 
     public static void registerNewBlocks(CreateRegistrate registrate) {
-        BARRED_WIRE = registrate.block("new_block/barred_wire_block", IronBarsBlock::new)
+        WIRE_FENCE_BLOCK = registrate.block("new_block/wire_fence_block", IronBarsBlock::new)
                 .initialProperties(() -> Blocks.IRON_BARS)
                 .simpleItem()
                 .register();
     }
 }
+

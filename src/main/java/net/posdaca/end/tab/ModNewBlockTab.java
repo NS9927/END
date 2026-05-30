@@ -10,7 +10,7 @@ public class ModNewBlockTab {
         registrate.defaultCreativeTab("new_block_tab", builder -> builder
                         .title(Component.translatable("end.NewBlockTab"))
                         .withTabsBefore(CreativeModeTabs.COMBAT)
-                        .icon(() -> ModNewBlock.BARRED_WIRE.asStack()))
+                        .icon(() -> ModNewBlock.WIRE_FENCE_BLOCK.asStack()))
                 .register();
         ModNewBlock.registerNewBlocks(registrate);
     }

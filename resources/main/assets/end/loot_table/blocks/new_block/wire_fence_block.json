@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "end:new_block/barred_wire_block"
+          "name": "end:new_block/wire_fence_block"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "end:blocks/barred_wire_block"
+  "random_sequence": "end:blocks/wire_fence_block"
 }
