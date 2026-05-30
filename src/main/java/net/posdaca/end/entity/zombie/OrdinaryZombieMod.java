@@ -4,12 +4,16 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.level.Level;
 
-public class HawkeyeZombie extends BaseSignalZombie {
+//普通丧尸
+public class OrdinaryZombieMod extends ModBaseZombie {
 
-    private static final double DETECT_RANGE = 25.0;
-    private static final double SIGNAL_RANGE = 20.0;
+    //玩家检测半径
+    private static final double DETECT_RANGE = 15.0;
 
-    public HawkeyeZombie(EntityType<? extends Zombie> entityType, Level level) {
+    //信号传播半径
+    private static final double SIGNAL_RANGE = 15.0;
+
+    public OrdinaryZombieMod(EntityType<? extends Zombie> entityType, Level level) {
         super(entityType, level);
     }
 

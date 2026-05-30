@@ -8,23 +8,28 @@ import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.posdaca.end.END;
-import net.posdaca.end.entity.zombie.HawkeyeZombie;
-import net.posdaca.end.entity.zombie.OrdinaryZombie;
+import net.posdaca.end.entity.zombie.HawkeyeZombieMod;
+import net.posdaca.end.entity.zombie.OrdinaryZombieMod;
 
+//实体注册中心
 public class ModEntityRegister {
+
+    //实体注册表
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
             DeferredRegister.create(Registries.ENTITY_TYPE, END.MOD_ID);
 
-    public static final DeferredHolder<EntityType<?>, EntityType<OrdinaryZombie>> ORDINARY_ZOMBIE =
+    //普通丧尸
+    public static final DeferredHolder<EntityType<?>, EntityType<OrdinaryZombieMod>> ORDINARY_ZOMBIE =
             ENTITY_TYPES.register("ordinary_zombie",
-                    () -> EntityType.Builder.of(OrdinaryZombie::new, MobCategory.MONSTER)
+                    () -> EntityType.Builder.of(OrdinaryZombieMod::new, MobCategory.MONSTER)
                             .sized(0.6f, 1.95f)
                             .clientTrackingRange(8)
                             .build("ordinary_zombie"));
 
-    public static final DeferredHolder<EntityType<?>, EntityType<HawkeyeZombie>> HAWKEYE_ZOMBIE =
+    //鹰眼丧尸
+    public static final DeferredHolder<EntityType<?>, EntityType<HawkeyeZombieMod>> HAWKEYE_ZOMBIE =
             ENTITY_TYPES.register("hawkeye_zombie",
-                    () -> EntityType.Builder.of(HawkeyeZombie::new, MobCategory.MONSTER)
+                    () -> EntityType.Builder.of(HawkeyeZombieMod::new, MobCategory.MONSTER)
                             .sized(0.6f, 1.95f)
                             .clientTrackingRange(8)
                             .build("hawkeye_zombie"));
@@ -34,8 +39,9 @@ public class ModEntityRegister {
         modEventBus.addListener(ModEntityRegister::onEntityAttributeCreation);
     }
 
+    //注册实体属性
     private static void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
-        event.put(ORDINARY_ZOMBIE.get(), OrdinaryZombie.createAttributes().build());
-        event.put(HAWKEYE_ZOMBIE.get(), HawkeyeZombie.createAttributes().build());
+        event.put(ORDINARY_ZOMBIE.get(), OrdinaryZombieMod.createAttributes().build());
+        event.put(HAWKEYE_ZOMBIE.get(), HawkeyeZombieMod.createAttributes().build());
     }
 }
