@@ -1,5 +1,4 @@
 {
-	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "end:block/wire_fence",
 		"particle": "end:block/wire_fence"

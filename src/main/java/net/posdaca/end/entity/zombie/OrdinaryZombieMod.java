@@ -7,7 +7,7 @@ import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.posdaca.end.register.ModEntityRegister;
 
-//普通丧尸，检测半径15格，信号传播半径15格
+//普通丧尸
 public class OrdinaryZombieMod extends ModBaseZombie {
 
     //普通丧尸的实体类型注册
@@ -19,10 +19,10 @@ public class OrdinaryZombieMod extends ModBaseZombie {
                             .build("ordinary_zombie"));
 
     //玩家检测半径
-    private static final double DETECT_RANGE = 15.0;
+    private static final double DETECT_RANGE = 10.0;
 
     //信号传播半径
-    private static final double SIGNAL_RANGE = 15.0;
+    private static final double SIGNAL_RANGE = 10.0;
 
     public OrdinaryZombieMod(EntityType<? extends Zombie> entityType, Level level) {
         super(entityType, level);
