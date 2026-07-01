@@ -10,7 +10,6 @@ public class ModTabRegister {
         registrate.registerEventListeners(modEventBus);
 
         ModNewItemTab.registerNewItemTab(registrate);
-        ModCompatibleItemTab.registerCompatibleItemTab(registrate);
         ModNewBlockTab.registerNewBlockTab(registrate);
         ModCreateBlockTab.registerCreateTab(registrate);
         ModEggItemTab.registerEggItemTab(registrate);

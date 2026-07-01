@@ -10,7 +10,7 @@ public class ModNewItemTab {
         registrate.defaultCreativeTab("new_item_tab", builder -> builder
                         .title(Component.translatable("end.NewItemTab"))
                         .withTabsBefore(CreativeModeTabs.COMBAT)
-                        .icon(() -> ModNewItem.STEEL_WIRE.asStack()))
+                        .icon(() -> ModNewItem.SULFUR_POWDER.asStack()))
                 .register();
         ModNewItem.registerNewItems(registrate);
     }

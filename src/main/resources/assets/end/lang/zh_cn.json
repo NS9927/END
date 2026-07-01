@@ -4,12 +4,10 @@
 
   "end.CreateBlockTab": "The End - 机械动力方块",
 
-  "end.CompatibleItemTab": "The End - 兼容性物品",
-  "item.end.compatible_item.sulfur_powder": "硫磺粉",
-  "item.end.compatible_item.andesite_powder": "安山岩粉",
-
   "end.NewItemTab": "The End - 物品",
   "item.end.new_item.steel_wire": "钢丝",
+  "item.end.compatible_item.sulfur_powder": "硫磺粉",
+  "item.end.compatible_item.andesite_powder": "安山岩粉",
 
   "end.EggItemTab": "The End - 生物蛋",
   "item.end.spawn_egg.ordinary_zombie_spawn_egg": "普通丧尸生物蛋",

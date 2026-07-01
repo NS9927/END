@@ -9,6 +9,7 @@ public class ModNewBlock {
     public static BlockEntry<IronBarsBlock> WIRE_FENCE_BLOCK;
 
     public static void registerNewBlocks(CreateRegistrate registrate) {
+        //铁丝栅栏
         WIRE_FENCE_BLOCK = registrate.block("new_block/wire_fence_block", IronBarsBlock::new)
                 .initialProperties(() -> Blocks.IRON_BARS)
                 .simpleItem()
