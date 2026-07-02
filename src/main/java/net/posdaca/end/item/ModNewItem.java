@@ -13,8 +13,8 @@ public class ModNewItem {
         //钢丝
         STEEL_WIRE = registrate.item("new_item/steel_wire", Item::new).register();
         //硫磺粉
-        SULFUR_POWDER = registrate.item("compatible_item/sulfur_powder", Item::new).register();
+        SULFUR_POWDER = registrate.item("new_item/sulfur_powder", Item::new).register();
         //安山岩粉
-        ANDESITE_POWDER = registrate.item("compatible_item/andesite_powder", Item::new).register();
+        ANDESITE_POWDER = registrate.item("new_item/andesite_powder", Item::new).register();
     }
 }
